@@ -5,7 +5,7 @@
     \begin{table}[ht]
         \centering
         \caption{First-Stage 2SLS Results Comparing Instruments (Standard Card Instrument vs. Predicted Immigrant Growth Rate)}
-        \label{tab:combined_regression}
+        \label{tab:fs}
         \resizebox{\textwidth}{!}{
             \begin{tabular}{rcccccc}
                 \toprule
@@ -51,6 +51,20 @@
             * Significant at the 10 percent level.
         \end{minipage}
     \end{table}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Main Results}
+    \framesubtitle{Instrumental Relevance}
+    
+    The results in Table \ref{tab:fs} compare the performance of two instruments: the \textit{Standard Card Instrument} and the \textit{Predicted Immigrant Growth Rate Instrument} (alternative instrument). To determine their relevance, we examine the p-values and apply the commonly accepted rule of thumb, as outlined in the methodology section.
+    
+    \begin{itemize}
+        \item Including all controls, the Partial $F$-Statistics in columns (3) and (6) are 0.1735 and 9.9777, respectively. 
+        \item The Standard Card Instrument in column (3) is critically below 10, providing weak evidence of instrumental relevance.
+        \item The Predicted Immigrant Growth Rate Instrument is a relevant instrument, as it approximates the $F$-statistic threshold and is highly significant according to the criteria set by Montiel Olea \& Pflueger (2013).
+    \end{itemize}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,9 +136,21 @@ Constant Term
     \end{table}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Main Results}
+    \framesubtitle{Causal Effect on Native Population Outcomes}
 
-                                                                        
+    To contextualize these results, we compare two commuting zones (CZs) based on the level of immigrant inflow between 1980 and 2007—one representing the 25th percentile and the other the 75th percentile.
 
-                                                                        
+We predict that the CZ with higher immigrant exposure will experience the following differentials:
+\begin{itemize}
+    \item A 4.12 percent larger decrease in log wages (not statistically significant),
+    \item A 0.04 percentage point larger increase in the unemployment rate,
+    \item A 0.03 percentage point larger increase in the 'Not-in-the-labor-force' (NILF) rate.
+\end{itemize}
 
-                                                                        
+\footnotetext{
+The coefficients for NILF and the unemployment rate are statistically significant at the 5\% and 1\% levels, respectively. However, the coefficient for wages is not statistically significant at the 10\% level, so it cannot be interpreted.
+}
+\end{frame}

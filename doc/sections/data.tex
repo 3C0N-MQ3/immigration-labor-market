@@ -19,7 +19,50 @@
 \begin{frame}
     \frametitle{Data Description}
     \framesubtitle{Transformations}
+    \begin{itemize}
+        \item \textbf{Step I:} By CZ c and year y: Construct native average wages, native unemployment and labor force participation rates
+    \end{itemize}
+    \begin{itemize}
+        \item \textbf{Step II:} Construct immigrant inflow: 
+        \item \[x_c = \frac{1}{N_{c,1980}} \left(I_{c,2007} - I_{c,1980}\right)\]
+    \end{itemize}
+
+    Where:
+    \begin{itemize}
+        \item $N_{c,1980}$ is the total population of $c$ in year 1980
+        \item $I_{c,y}$ is the population of immigrants in $c$ in year $y$
+    \end{itemize}
+\end{frame}
+%% ------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Data Description}
+    \framesubtitle{Transformations}
+    \begin{itemize}
+        \item \textbf{Step III:} Construct instrument I (\emph{Standard Card instrument}): 
+        \[z_c = \frac{1}{N_{c,1980}} \sum_s f^s_{c,1980} \left(I^s_{2007} - I^s_{1980}\right)\]
+    \end{itemize}
+    \begin{itemize}
+        \item $I^s_y = $ number of immigrants from source region $s$ in the US in year $y$
+        \item $f^s_{c,1980} = \frac{I^s_{c,1980}}{I^s_{1980}}$ share of immigrants from $s$ who are in $c$ in year 1980
+    \end{itemize}
+    \begin{itemize}
+        \item \textbf{Step IIIa:} Construct instrument II (\emph{Predicted Immigration Growth Rate}):
+        \[z_c^{\text{alt}} = \frac{1}{I_{c,1980}} \sum_s f^s_{c,1980} \left(I^s_{2007} - I^s_{1980}\right)\]
+    \end{itemize}
+
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}
+    \frametitle{Data Description}
+    \framesubtitle{Dependent Variables}
 
+The analysis examines the following dependent variables in response to changes in immigrant inflows:
+
+\begin{itemize}
+    \item Growth Rate of Wages: The percentage change in native wages between 1980 and 2007.
+    \item Growth Rate of Unemployment: The change in then unemployment rate of the native population, measured in percentage points, between 1980 and 2007.
+    \item Growth Rate of NILF: The change in the rate of the native population who do not participate in the labor force (Not in Labor Force, NILF), between 1980 and 2007. 
+\end{itemize}
+\end{frame}
